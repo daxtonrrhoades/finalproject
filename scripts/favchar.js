@@ -4,16 +4,12 @@ const favButton = document.querySelector("#fav-btn");
 const favList = document.querySelector("#fav-list");
 
 favButton.addEventListener('click', () => {
-    if (input.value.trim() !== '') {
-        displayList(input.value);
-        favCharArray.push(input.value);
-        setFavCharList();
+    displayList(input.value);
+    favCharArray.push(input.value);
+    setFavCharList();
 
-        input.value = '';
-        input.focus();
-    } else {
-        console.log('Nothing was entered. Try again.');
-    }
+    input.value = '';
+    input.focus();
 });
 
 let favCharArray = getFavCharList() || [];
