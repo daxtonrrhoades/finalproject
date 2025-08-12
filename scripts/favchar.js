@@ -1,4 +1,4 @@
-// -----Favorit Characters List-----
+// -----Favorite Characters List-----
 const input = document.querySelector("#fav-char");
 const favButton = document.querySelector("#fav-btn");
 const favList = document.querySelector("#fav-list");
