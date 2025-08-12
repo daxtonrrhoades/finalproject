@@ -6,7 +6,6 @@ const cards = document.querySelector('.character-cards');
 async function getCharacterData() {
     const response = await fetch(source);
     const data = await response.json();
-    // console.table(data.characters);
     displayCharacters(data.characters);
 }
 
