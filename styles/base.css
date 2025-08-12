@@ -372,9 +372,10 @@ footer {
     text-align: center;
 }
 
-.sources {
+footer a {
     color: var(--accent-color2);
     font-family: var(--main-font);
+    margin: 1rem;
 }
 
 .social a {
