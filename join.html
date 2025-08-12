@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wicketpedia Join</title>
+    <meta name="description"
+        content="This page contains a form to sign up for a weekly newsletter from Wicketpedia. It will require basic contact information and allow for more fields to be filled out.">
+    <meta name="author" content="Daxton Rhoades">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+    <link rel="icon" href="images/ewok.ico">
+    <meta property="og:title" content="Wicketpedia Join">
+    <meta property="og:description"
+        content="This page contains a form to sign up for a weekly newsletter from Wicketpedia. It will require basic contact information and allow for more fields to be filled out.">
+    <meta property="og:image" content="https://github.com/daxtonrrhoades/wdd231/blob/main/final/images/join-og.jpeg">
+    <meta property="og:url" content="https://daxtonrrhoades.github.io/wdd231/final/join.html">
+</head>
+
+<body>
+    <header>
+        <img src="images/star-wars-logo.png" alt="Logo for Star Wars" loading="lazy" width="120" height="63">
+        <span>Wicketpedia</span>
+        <button id="ham-btn" class="hamburger" aria-label="hamburger button"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li class="current"><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="join">
+        <div class="join-intro">
+            <h1>Join</h1>
+            <p>Would you like to join our newsletter? Join now by filling out this form!</p>
+            <img src="images/join-me-image.webp" alt="Darth Vader join me meme" width="612" height="402" loading="lazy">
+        </div>
+        <form action="thankyou.html" class="join-form" method="get" onsubmit="setTimestamp()">
+            <fieldset>
+                <label for="first-name">*First Name:</label>
+                <input type="text" name="first-name" id="first-name" autocomplete="given-name" title="First name"
+                    required>
+                <label for="last-name">*Last Name:</label>
+                <input type="text" name="last-name" id="last-name" autocomplete="family-name" title="Last name"
+                    required>
+                <label for="email">*Email:</label>
+                <input type="email" name="email" id="email" placeholder="johndoe@gmail.com" title="Email address"
+                    autocomplete="email" required>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" name="phone" id="phone" title="Phone number" autocomplete="tel">
+                <label>How often do you want emails?</label>
+                <label for="daily"><input type="radio" name="email-frequency" id="daily" value="Daily Emails"
+                        required>Daily Emails</label>
+                <label for="weekly"><input type="radio" name="email-frequency" id="weekly" value="Weekly Emails"
+                        required>Weekly Emails</label>
+                <label for="monthly"><input type="radio" name="email-frequency" id="monthly" value="Monthly Emails"
+                        required>Monthly Emails</label>
+                <label for="feedback">What kind of content would you like to see?<textarea name="feedback"
+                        id="feedback"></textarea></label>
+                <input type="hidden" name="timestamp" id="timestamp">
+                <button type="submit">Sign Up</button>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://github.com/daxtonrrhoades"><img src="images/github.svg" alt="Github Logo" width="16"
+                    height="16"></a>
+            <a href="https://www.linkedin.com/in/daxton-rhoades-17160a2ab/"><img src="images/linkedin.svg"
+                    alt="LinkedIn" width="16" height="16"></a>
+            <a href="https://www.instagram.com/charisma_capn"><img src="images/instagram.svg" alt="Instagram" width="16"
+                    height="16"></a>
+        </div>
+        <div class="footer-info">
+            <p>&copy;<span id="currentyear"></span> | Daxton Rhoades | WDD231 Final Project</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+            <a href="sources.html" class="sources">Sources</a>
+        </div>
+    </footer>
+</body>
+
+</html>

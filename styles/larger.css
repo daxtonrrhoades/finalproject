@@ -1,0 +1,93 @@
+@media screen and (min-width: 1200px) {
+
+    /* ----------PAGE WIDE---------- */
+    :root {
+        --primary-color: #11296B;
+        --secondary-color: #00509D;
+        --accent-color1: #EDEDED;
+        --accent-color2: #FFDB57;
+        --accent-color3: #FFCB05;
+
+        --heading-font: "Luckiest Guy", cursive;
+        --main-font: "Quantico", sans-serif;
+    }
+
+    /* ----------Header---------- */
+    header {
+        grid-template-columns: 120px auto 400px;
+    }
+
+    header span {
+        margin: 2rem;
+        font-size: 2.5rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: end;
+    }
+
+    .navigation.show {
+        display: flex;
+    }
+
+    .navigation ul {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .navigation li {
+        font-size: 1.8rem;
+    }
+
+    /* ----------Main---------- */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .summary {
+        grid-column: 1/2;
+    }
+
+    .wv-cards {
+        grid-column: 2/-1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modal {
+        max-width: 800px;
+    }
+
+    .join {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .join-form {
+        grid-column: 2/-1;
+        grid-row: 1/-1;
+    }
+
+    .join-intro {
+        grid-column: 1/2;
+    }
+
+    .join-intro p{
+        font-size: 2.3rem;
+    }
+
+    .join-intro img {
+        width: 70%;
+    }
+
+    /* ----------Footer---------- */
+
+}
